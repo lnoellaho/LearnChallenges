@@ -72,7 +72,8 @@ function createCarObject(modelYear, carMake, carColor) {
 }
 
 */
-//correct solution
+//possible solution
+//Story 3
 function createCarObject(modelYear, carMake, carColor) {
     var speed = 50;
   return {
@@ -107,4 +108,66 @@ function createCarObject(modelYear, carMake, carColor) {
   };
 }
 
+//optimized correct solution
+function createCarObject(modelYear, carMake, carColor, startSpeed) {
+    var speed = startSpeed;
+  return {
+    year: modelYear,
+    make: carMake,
+    color: carColor,
+    getData: function() {
+      return "I have a " + this.year + " " + this.make + " in " + this.color
+    },
+    carSpeed: function() {
+      return {
+        getSpeed: function() {console.log(speed); },
+        accelerate: function(maxSpeed) {
+            while (speed < maxSpeed) {
+                var newSpeed = speed + 1;
+                speed = newSpeed;
+                //console.log(speed);
+            }},
+        brake: function(minSpeed) {
+            while (speed > minSpeed) {
+                var newSpeed = speed -1;
+                speed = newSpeed;
+                //console.log(speed);
+            }}
+      };
+    }
+  };
+}
+
+//var car1 = createCarObject(2018, "Lotus", "yellow", 50)
+//car1.carSpeed().brake(0)
+//car1.carSpeed().getSpeed()
+
 //Story 4
+function createCarObject(modelYear, carMake, carColor, startSpeed) {
+    var speed = startSpeed;
+  return {
+    year: modelYear,
+    make: carMake,
+    color: carColor,
+    getData: function() {
+      return "I have a " + this.year + " " + this.make + " in " + this.color
+    },
+    carSpeed: function() {
+      return {
+        getSpeed: function() {console.log(speed); },
+        accelerate: function(maxSpeed) {
+            while (speed < maxSpeed) {
+                var newSpeed = speed + 10;
+                speed = newSpeed;
+                //console.log(speed);
+            }},
+        brake: function(minSpeed) {
+            while (speed > minSpeed) {
+                var newSpeed = speed -7;
+                speed = newSpeed;
+                //console.log(speed);
+            }}
+      };
+    }
+  };
+}
