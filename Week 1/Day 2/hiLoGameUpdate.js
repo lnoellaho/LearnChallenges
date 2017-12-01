@@ -1,3 +1,5 @@
+// hiLoGame update by myself
+
 function hiLoGame() {
   var userName = prompt("Enter username.");
   var secret = Math.floor(Math.random() * 101);

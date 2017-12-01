@@ -1,3 +1,5 @@
+//Week 1 Day 2 Leeann and Justin
+//Hi Lo Game
 function promptUser(){
   var x = prompt("Select a number from 1 to 100");
   return x;
