@@ -1,0 +1,85 @@
+body {
+font-family: "Monaco";
+color: white;
+}
+#h_one{
+    text-align: center;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+img {
+    height: 50%;
+    width: 50%;
+}
+#Josh {
+    float: left;
+    width: 300px;
+    border: 2px solid #007d9b;
+    padding: 25px;
+    margin: 25px;
+    z-index: 2;
+
+}
+#Leeann {
+    float: right;
+    width: 300px;
+    border: 2px solid #007d9b;
+    padding: 35px;
+    margin: 25px;
+    z-index: 2;
+}
+.table {
+    clear:both;
+    width: 300px;
+    border: 2px solid #007d9b;
+    padding: 25px;
+    margin: auto;
+
+}
+h2 {
+text-align: center;
+}
+td {
+    border: 1px solid white;
+}
+a {
+    color: white;
+}
+h3 {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+
+}
+.name {
+    text-align: left;
+}
+#future, img {
+    text-align: center;
+
+}
