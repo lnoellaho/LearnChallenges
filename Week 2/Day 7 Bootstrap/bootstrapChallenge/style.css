@@ -1,0 +1,80 @@
+body {
+    background: #2E2C2F;
+    font-family: "Abril Fatface";
+    background-image: url("https://thumbs.dreamstime.com/b/wood-metallic-texture-background-rustic-banner-blue-tones-51204566.jpg");
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h2.locations {
+    font-size: 20px;
+}
+
+h4.card-title {
+    font-size: 30px;
+}
+
+h1.my-4 {
+    color: black;
+
+}
+.meetus {
+    color: black;
+    background-color: white;
+    opacity: 0.7;
+}
+.card-body {
+    opacity: 0.4;
+}
+
+
+img.logo {
+    width: 10%;
+    height: 10%;
+}
+a.navbar-brand{
+    font-family: monoton;
+    font-size: 30px;
+}
+#faqheadline {
+    color: black;
+}
+label.contactForm {
+    color: black;
+}
+
+.form-group {
+    color: white;
+}
+
+mark {
+    background-color: white;
+    opacity: 0.7;
+    color: black;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
