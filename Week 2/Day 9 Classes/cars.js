@@ -1,9 +1,8 @@
-// Story: As a programmer, I can make a car.
-// Hint: Create a class called Car, and create a variable called myCar which contains an object of class Car.
-// Made up car years because of made up cars (TATA?)
+//Week 2 Day 4 Leeann and Kate
 class Car {
-  constructor() {
+  constructor(year) {
     this.wheels = 4,
+    this.modelYear= year,
     this.lights = false,
     this.signal = "off",
     this.speed = 0
@@ -23,27 +22,24 @@ class Car {
      console.log(direction);
    }
  }
-
+ carInfo() {
+     return this;
+ }
 }
 
 class Tesla extends Car {
-  constructor() {
-    super (),
-    this.modelYear =3000
+  constructor(year) {
+    super(year)
   }
   acceleration () {
      this.speed += 10 }
   brake () {
     this.speed -= 7 }
-  carInfo() {
-    return
-  }
-  }
+}
 
 class Tata extends Car {
-  constructor() {
-    super(),
-    this.modelYear =5
+  constructor(year) {
+    super(year)
   }
   acceleration () {
     this.speed += 2
@@ -54,9 +50,8 @@ class Tata extends Car {
 }
 
 class Toyota extends Car {
-  constructor() {
-    super(),
-    this.modelYear =2015
+  constructor(year) {
+    super(year)
 }
   acceleration() {
     this.speed += 7
@@ -64,7 +59,6 @@ class Toyota extends Car {
   brake() {
     this.speed -= 5
   }
-
 }
 
 
@@ -73,15 +67,45 @@ var myTesla = new Tesla()
 var myCar = new Car()
 var myToyota = new Toyota()
 
+var carCollection = [];
 
+function addCollection(vehicle) {
+    carCollection.push(vehicle.carInfo());
+}
 
+var tesla1 = new Tesla(1990)
+var tesla2 = new Tesla(1992)
+var tata1 = new Tata(2000)
+var tata2 = new Tata(1200)
+var toyota1 = new Toyota(1300)
+var toyota2 = new Toyota(1100)
 
+addCollection(tesla1)
+addCollection(tesla2)
+addCollection(tata1)
+addCollection(tata2)
+addCollection(toyota1)
+addCollection(toyota2)
 
-// Story: As a programmer, I can call upon a car to tell me all it's information.
-// Hint: Implement carInfo method on one or more classes. You can call a super class's carInfo with super.
-//
-// Story: As a programmer, I can keep a collection of two of each kind of vehicle, all from different years.
-// Hint: Create two of each vehicles, all from different model years, and put them into an Array.
+carCollection
+
+carCollection.sort(function(a,b) {
+    return a.modelYear - b.modelYear
+})
+
+carCollection.sort(function(a,b) {
+    var nameA = a.toUpperCase();
+    var nameB = b.toUpperCase();
+    if(nameA < nameB) {
+        return -1
+    } else if
+    (nameA > nameB) {
+        return 1
+    } else {
+        return 0
+    }
+})
+
 //
 // Story: As a programmer, I can sort my collection of cars based on model year.
 //
