@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+.flash {
+   animation-name: flash;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: black;}
+    to {color: white;}
+}
+
+body {
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.App-logo {
+  animation: App-logo-spin infinite 1s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  font-family: 'Coiny', cursive;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.ninja {
+  height: 80%;
+  width: 80%;
+}
+
+.hong {
+  height: 80%;
+  width: 80%;
+}
+.chip{
+  height: 80%;
+  width: 80%;
+}
+.About{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-evenly;
+  /*grid-auto-columns: 1fr 1fr;*/
+
+}
+.Rosarito{
+  height: 80%;
+  width: 80%;
+}
+.jordan {
+  font-family: 'Bangers';
+  width: 550px;
+  justify-self: center;
+  font-size: 50pt;
+  border: 5px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.leeann {
+  font-family: 'Unica One';
+  font-weight: bolder;
+  width: 550px;
+  justify-self: center;
+  font-size: 50pt;
+  border: 5px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
