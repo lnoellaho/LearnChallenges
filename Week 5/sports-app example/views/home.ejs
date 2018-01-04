@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Sports Team Data</h1>
+      <% for(var key in responses){ %>
+        Team: <%= responses[key].teamname %>
+        <br />
+        Players: <%= responses[key].players %>
+        <br / />
+        Wins: <%= responses[key].wins %>
+        <br />
+        Loses: <%= responses[key].loses %>
+        <br />
+        <br />
+      <% } %>
+  </body>
+</html>
