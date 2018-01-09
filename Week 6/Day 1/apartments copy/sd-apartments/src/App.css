@@ -1,0 +1,13 @@
+.box1 {
+    width: 750px;
+    margin: auto;
+
+}
+
+.head {
+    text-align: center;
+    background-image: url("sandiego.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+}
