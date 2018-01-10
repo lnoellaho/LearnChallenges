@@ -6,7 +6,7 @@ class RegistrationStore{
       email:'',
       password:''
     }
-    this.errors = [{}]
+    this.errors = {}
   }
 
   getFields(){
@@ -18,7 +18,7 @@ class RegistrationStore{
   }
 
   validate(){
-    this.errors = [{}]
+  this.errors = {}
     this.validatePresence('firstName')
     this.validatePresence('lastName')
     this.validatePresence('password')
@@ -44,25 +44,37 @@ class RegistrationStore{
   validatePassword(fieldName){
       var letter= /[a-zA-Z]/;
       var number= /[0-9]/;
-      if(this.fields[fieldName].length < 8){
-          this.addError(fieldName, 'needs a length of at least 8 characters')
-      } else if(!this.fields[fieldName].match(letter)) {
-          this.addError(fieldName, 'password must contain letters')
-      } else if(!this.fields[fieldName].match(number)) {
-          this.addError(fieldName, 'password must contain at least 1 number')
-      }
-  }
-
-  // validatePassword2(fieldName){
-  //     const num = /^[0-9a-zA-Z]+$/;
-  //     if (!num.test(this.fields[fieldName])){
+  //     if(this.fields[fieldName].length < 8){
+  //         this.addError(fieldName, 'needs a length of at least 8 characters')
+  //     } else if(!this.fields[fieldName].match(letter)) {
+  //         this.addError(fieldName, 'password must contain letters')
+  //     } else if(!this.fields[fieldName].match(number)) {
   //         this.addError(fieldName, 'password must contain at least 1 number')
   //     }
-  // }
+  //
+      if(this.fields[fieldName].length < 8){
+        this.addError(fieldName, 'needs a length of at least 8 characters')
+      }
+      if(!this.fields[fieldName].match(letter)) {
+        this.addError(fieldName, 'password must contain letters')
+      }
+      if(!this.fields[fieldName].match(number)) {
+        this.addError(fieldName, 'password must contain at least 1 number')
+      }
+    }
+
+
+
 
   addError(fieldName, message){
-    this.errors[fieldName] = message
-
+    // this.errors[fieldName] = message
+    // this.errors.push({fieldName: message})
+    // console.log(this.errors)
+    if(this.errors[fieldName]){
+      this.errors[fieldName].push(message)
+    } else {
+      this.errors[fieldName]= [message]
+    }
   }
 }
 

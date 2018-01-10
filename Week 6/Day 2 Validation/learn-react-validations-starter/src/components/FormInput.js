@@ -9,7 +9,15 @@ export default class FormInput extends Component {
   }
 
   render(){
+    if(this.props.errors){
+      var passError= this.props.errors;
+      var errorList= passError.map(function(el, i){
+        return <li key={i}> {el} </li>
+      })
+    }
+
     return(
+
       <div className={`form-group ${this.props.errors && 'has-error'}`}>
         <label
           htmlFor={this.props.name}
@@ -26,7 +34,11 @@ export default class FormInput extends Component {
         />
 
         {this.props.errors &&
-          <div className='help-block'>{this.props.errors}</div>
+          <div className='help-block'>
+            <ul>
+              {errorList}
+            </ul>
+          </div>
         }
       </div>
     )

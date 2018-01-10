@@ -8,7 +8,7 @@ class App extends Component {
     super(props)
     this.state={
       registration: RegistrationStore.getFields(),
-      errors: [{}]
+      errors: {}
     }
   }
 
@@ -37,9 +37,7 @@ class App extends Component {
   }
 
   render() {
-      var errorsList = this.state.errors.map(function(error, i) {
-          return error[i].password
-      })
+
     return (
       <div>
         <Header />
@@ -100,7 +98,7 @@ class App extends Component {
                         label='Password'
                         value={this.state.registration.password}
                         onChange={this.handleChange.bind(this)}
-                        errors={errorsList}
+                        errors={this.state.errors.password}
                       />
                       </div>
                     </div>
