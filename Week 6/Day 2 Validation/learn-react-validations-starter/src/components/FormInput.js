@@ -9,6 +9,7 @@ export default class FormInput extends Component {
   }
 
   render(){
+    //must use an if statement that runs the function only if errors exist. otherwise the page won't render because errors do not exist.
     if(this.props.errors){
       var passError= this.props.errors;
       var errorList= passError.map(function(el, i){

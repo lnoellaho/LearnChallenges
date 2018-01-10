@@ -70,6 +70,8 @@ class RegistrationStore{
     // this.errors[fieldName] = message
     // this.errors.push({fieldName: message})
     // console.log(this.errors)
+    //if errors[fieldName] array already exists, push(add) a new message to the array.
+    //else, make a new arry for the fieldname that includes a new message
     if(this.errors[fieldName]){
       this.errors[fieldName].push(message)
     } else {
