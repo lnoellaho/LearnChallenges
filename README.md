@@ -16,3 +16,5 @@ Week 6: Full Stack
 Week 7: Professional Development
 
 Week 8: Battleship
+
+Week 9: Wiki-Rivet
